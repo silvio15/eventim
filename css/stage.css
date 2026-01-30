@@ -1,0 +1,492 @@
+/* ======================
+   RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+}
+
+/* ======================
+   HEADER
+====================== */
+header {
+  background-color: #0d0d0d;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #d4142a;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ff3b5c;
+}
+
+nav input {
+  width: 280px;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+nav input:focus {
+  border-color: #d4142a;
+  box-shadow: 0 0 10px rgba(212, 20, 42, 0.3);
+}
+
+/* ======================
+   MAIN
+====================== */
+main {
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #0d0d0d;
+  text-align: center;
+}
+
+/* ======================
+   DAY NAVIGATION
+====================== */
+.event-days-options-info {
+  margin-bottom: 2rem;
+}
+
+.event-days-options-info ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.event-days-options-info a {
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+}
+
+.event-days-options-info a:hover,
+.event-days-options-info a.active {
+  color: #d4142a;
+  border-bottom: 3px solid #d4142a;
+}
+
+/* -----------------------------
+   Layout Tabs
+----------------------------- */
+.layout-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.layout-tabs button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #eee;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.layout-tabs button.active,
+.layout-tabs button:hover {
+  background-color: #d4142a;
+  color: #fff;
+}
+
+/* ======================
+   STAGE OVERVIEW
+====================== */
+.stage-info {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stage-overview {
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stage-overview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.stage-overview h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  color: #d4142a;
+}
+
+.stage-overview img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* ======================
+   EVENT LAYOUT
+====================== */
+.event-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 3rem;
+}
+
+/* LEFT & RIGHT ASIDE */
+.left-aside,
+.right-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* STAND CARD */
+.left-aside > div,
+.right-aside > div {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0.8rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.left-aside > div:hover,
+.right-aside > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.left-aside img,
+.right-aside img {
+  width: 60%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 0.5rem;
+}
+
+.left-aside p,
+.right-aside p {
+  font-size: 0.95rem;
+  color: #555;
+}
+/* ======================
+   CENTER CONTENT + FLEX SJEDALA
+====================== */
+.center-content {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+/* Cijeli layout sjedala */
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px; /* RAZMAK IZMEĐU SEKCIJA */
+  width: 100%;
+}
+
+/* ======================
+   ROTATION TOGGLE BUTTON
+====================== */
+.rotate-layout-btn {
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.rotate-layout-btn::before {
+  content: "🔄 ";
+}
+
+.rotate-layout-btn:hover {
+  background: #eee;
+}
+
+/* ======================
+   SEAT LAYOUT ORIENTATION
+====================== */
+.seat-layout.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-layout.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* horizontal: redovi postaju stupci */
+.seat-layout.horizontal .seat-row {
+  flex-direction: column;
+}
+
+/* Sekcija */
+.seat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Jedan red */
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Oznaka reda */
+.row-label {
+  width: 20px;
+  text-align: right;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #666;
+  margin-right: 6px;
+}
+
+/* Sjedalo */
+.seat {
+  min-width: 11px;
+  min-height: 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+/* Sekcije – svjetlije boje */
+.seat.section-A {
+  background-color: #85c1e9;
+}
+.seat.section-B {
+  background-color: #82e0aa;
+}
+.seat.section-C {
+  background-color: #f9e79f;
+}
+
+/* Hover */
+.seat.available:hover {
+  filter: brightness(1.1);
+}
+
+/* Selektirano */
+.seat.selected {
+  filter: brightness(0.7);
+  transform: scale(1.08);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Onemogućeno */
+.seat.sold,
+.seat.occupied {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* ======================
+   CHECKOUT BUTTON
+====================== */
+.checkout-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #d4142a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.checkout-btn:hover:not(:disabled) {
+  background-color: #ff3b5c;
+}
+
+/* ======================
+   MINI MAP
+====================== */
+.mini-map {
+  width: 100%;
+  max-width: 420px;
+  background: #f9f9fb;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-shadow: inset 0 0 0 1px #ddd;
+  font-size: 0.65rem;
+}
+
+.mini-stage {
+  text-align: center;
+  font-weight: bold;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 6px;
+  font-size: 0.6rem;
+}
+
+.mini-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-map.horizontal .mini-sections {
+  flex-direction: column;
+}
+
+.mini-section {
+  background: #ccc;
+  border-radius: 6px;
+  padding: 4px;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mini-section span {
+  font-weight: bold;
+  display: block;
+}
+
+.mini-section small {
+  opacity: 0.7;
+}
+
+.mini-section:hover {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+/* Highlight sekcije u glavnom layoutu */
+.seat-section.highlight {
+  outline: 3px solid #d4142a;
+  outline-offset: 4px;
+}
+
+.mini-section.section-1 {
+  background: #5dade2;
+}
+.mini-section.section-2 {
+  background: #58d68d;
+}
+.mini-section.section-3 {
+  background: #f4d03f;
+}
+.mini-section.section-4 {
+  background: #eb984e;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .event-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mini-map {
+    margin-top: 1.5rem;
+  }
+
+  .left-aside,
+  .right-aside,
+  .center-content {
+    width: 100%;
+  }
+  .center-content {
+    padding: 0;
+  }
+
+  nav input {
+    width: 100%;
+  }
+
+  .seat-grid {
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  }
+}

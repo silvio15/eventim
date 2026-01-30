@@ -1,0 +1,17 @@
+# Firebase config
+firebaseConfig.js
+
+# Environment files
+.env
+.env.local
+
+# Node / build folders (ako ikad dodaš node_modules)
+node_modules/
+
+# Build output (ako koristiš neki build alat)
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalji događaja, datumi i kupnja ulaznica">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="./css/event.css">
+    <!-- Firebase SDK (v8 compat) -->
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+    <title id="pageTitle">Eventim</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Eventim</a>
+
+            <!-- SEARCH -->
+            <form class="search-form" role="search">
+                <input id="searchInput" type="search" name="search" placeholder="Pretražite izvođače i događaje"
+                    aria-label="Pretraživanje događaja">
+            </form>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO EVENT IMAGE -->
+        <div id="event-hero">
+        </div>
+
+        <!-- EVENT DAYS -->
+        <section class="event-days">
+        </section>
+
+        <!-- OPIS EVENTA -->
+        <section class="event-description">
+            <h2>Informacije o događaju</h2>
+            <p id="eventDescription">Ovdje ide opis događaja...</p>
+        </section>
+
+    </main>
+
+    <!-- Firebase konfiguracija -->
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/firebaseInit.js"></script>
+
+
+    <!-- Skripta za dohvat evenata -->
+    <script src="./js/event.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stage.css">
+    <!-- Firebase SDK (v8 compat) -->
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+
+    <title>Eventim</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Eventim</a>
+
+            <!-- SEARCH -->
+            <form class="search-form" role="search">
+                <input id="searchInput" type="search" name="search" placeholder="Pretražite izvođače i događaje"
+                    aria-label="Pretraživanje događaja">
+            </form>
+        </nav>
+    </header>
+    <main>
+        <div class="stage-info">
+            <h2 class="event-title"></h2>
+
+            <!-- DAY TABS -->
+            <nav class="event-days-options-info">
+                <ul>
+                </ul>
+            </nav>
+            <!-- STAGE OVERVIEW -->
+            <div class="event-legend">
+
+            </div>
+            <div class="stage-overview">
+                <h3>Pozornica</h3>
+                <img alt="Stage layout">
+                <!-- <img src="https://voca-land.sgp1.cdn.digitaloceanspaces.com/-1/1635862490014/istockphoto-1227545308-170667a.jpeg"
+                alt="Stage layout"> -->
+            </div>
+        </div>
+        <!-- LAYOUT GRID -->
+        <section class="event-layout">
+        </section>
+        <button class="checkout-btn" disabled>Kupi ulaznice</button>
+    </main>
+    <!-- Firebase konfiguracija -->
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/firebaseInit.js"></script>
+
+
+    <!-- Skripta za dohvat evenata -->
+    <script src="./js/stage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Firebase SDK (v8 compat) -->
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+    <title>Eventim</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Eventim</a>
+
+            <!-- SEARCH -->
+            <form class="search-form" role="search">
+                <input id="searchInput" type="search" name="search" placeholder="Pretražite izvođače i događaje"
+                    aria-label="Pretraživanje događaja">
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <section class="events-section">
+            <!-- <header class="section-header">
+                <h1>Aktualni događaji</h1>
+            </header> -->
+
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <h1>Doživi najbolje događaje uživo</h1>
+                <p>Koncerti, festivali i predstave na jednom mjestu</p>
+                <a href="#eventsContainer" class="btn-primary">Pregledaj događaje</a>
+            </section>
+
+            <!-- DROPDOWN FILTER -->
+            <div class="filter-sort-container">
+                <label><b>Filteri:</b></label>
+                <div class="multi-select-dropdown">
+                    <button id="dropdownBtn">Gradovi<i></i></button>
+                    <div id="dropdownOptions" class="dropdown-options">
+                        <!-- JS će dinamički kreirati checkboxeve i apply filter gumb -->
+                    </div>
+
+                </div>
+                <div id="date-container">
+                    <div class="filter-block">
+                        <label>Od:</label>
+                        <input type="date" id="dateFrom">
+                    </div>
+                    <div class="filter-block">
+                        <label>Do:</label>
+                        <input type="date" id="dateTo">
+                    </div>
+                </div>
+                <div id="sort-container">
+                    <b>Sortiraj po:</b>
+                </div>
+            </div>
+            <!-- SORT -->
+            <!-- <div class="sort-container">
+                <label for="sortSelect">Sortiraj po:</label>
+                <select id="sortSelect">
+                    <option value="date-desc">Datum (najnovije)</option>
+                    <option value="date-asc">Datum (najstarije)</option>
+                    <option value="price-asc">Cijena (najniža)</option>
+                    <option value="price-desc">Cijena (najviša)</option>
+                </select>
+            </div> -->
+
+            <!-- BADGES -->
+            <div id="selectedBadges" class="badges"></div>
+
+            <!-- EVENTI -->
+            <section id="eventsContainer"></section>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button id="prevBtn" disabled>← Prethodna</button>
+                <span id="pageIndicator">Stranica 1</span>
+                <button id="nextBtn">Sljedeća →</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Firebase konfiguracija -->
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/firebaseInit.js"></script>
+
+
+    <!-- Skripta za dohvat evenata -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
